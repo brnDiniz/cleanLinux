@@ -29,6 +29,9 @@ echo "Removendo os arquivos de bases e o debug.txt..."
 sudo rm -Rf /home/cloud-db/*.sql
 sudo rm -Rf /var/log/debug.txt
 
+echo "Excluindo a pasta GPUCache..."
+sudo rm -Rf /home/$(whoami)/GPUCache
+
 function LINHAS(){
 for i in `seq 1 50`
 do
