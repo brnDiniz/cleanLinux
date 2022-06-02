@@ -121,7 +121,7 @@ clear
 echo "Procurando arquivos temporários..."
 
 log="/tmp/temps.log"
-procurar=$(find / -iname "*~" -o -iname "*.tmp" -o -iname "*.old" -o -iname "*.xz" > $log 2> /dev/null)
+procurar=$(find / -iname "*.tmp" -o -iname "*.xz" > $log 2> /dev/null)
 num=`wc -l $log | awk '{print $1}'`
 num=`expr $num + 1`
 cont=1
